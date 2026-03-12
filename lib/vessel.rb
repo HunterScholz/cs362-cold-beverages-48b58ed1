@@ -13,11 +13,11 @@ class Vessel
     @liquid = liquid
   end
 
-  def empty?()
-    return !@full
+  def empty?
+    !@full
   end
 
-  def clear()
+  def drain
     @full = false
     @liquid = nil
   end

@@ -26,10 +26,10 @@ describe 'A vessel for holding liquid' do
     expect(vessel.liquid).to eq('FAKE LIQUID')
   end
 
-  it 'becomes empty and has no liquid when cleared' do
+  it 'becomes empty and has no liquid when drained' do
     vessel = Vessel.new('FAKE', 100)
     vessel.fill('FAKE LIQUID')
-    vessel.clear()
+    vessel.drain()
     expect(vessel).to be_empty
     expect(vessel.liquid).to eq(nil)
   end
